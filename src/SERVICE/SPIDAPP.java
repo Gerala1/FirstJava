@@ -10,19 +10,24 @@ import java.util.Map;
 public class SPIDAPP {
 
     public static void main(String[] args) throws Exception {
-        USER firstUser = new USER(1, "GERA", "LAJTHIA", "GLAJTHIA");
+        USER firstUser;
+        firstUser = new USER(1, "GERA", "LAJTHIA", "GLAJTHIA");
         SPID firstSPID = new SPID(1, firstUser, Status.PENDING, "jhjhb");
-        SPID secondSPID = new SPID(2, firstUser, Status.PENDING, "ohvkjh");
-        SPID thirdSPID = new SPID(3, firstUser, Status.PENDING, "gfjk");
-        SPID fourthSPID = new SPID(4, firstUser, Status.PENDING, "arsiu");
-        SPID fifthSPID = new SPID(5, firstUser, Status.PENDING, "Lodwl");
+        USER secondUser = new USER();
+        SPID secondSPID = new SPID(2, secondUser, Status.PENDING, "ohvkjh");
+        USER thirdUser = new USER();
+        SPID thirdSPID = new SPID(3, thirdUser, Status.PENDING, "gfjk");
+        USER fourthUser = new USER();
+        SPID fourthSPID = new SPID(4, fourthUser, Status.PENDING, "arsiu");
+        USER fifthUser = new USER();
+        SPID fifthSPID = new SPID(5, fifthUser, Status.PENDING, "Lodwl");
 
         firstUser.setId(2);
         firstUser.setName("Megi");
         firstUser.setSurname("Lajthia");
         firstUser.setUsername("Megila");
 
-        USER secondUser = new USER(3, "LEDIA", "LAMCE", "LOLO");
+        secondUser = new USER(3, "LEDIA", "LAMCE", "LOLO");
         firstSPID.setUser(secondUser);
         firstSPID.setStatus(Status.APPROVED);
         firstSPID.setDescripton("leggo");
